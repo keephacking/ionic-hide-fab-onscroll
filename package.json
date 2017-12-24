@@ -10,6 +10,10 @@
     },
     "keywords": ["angular5", "ionic3", "ionic2", "fab"],
     "author": "Sachin M S",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/keephacking/ionic-hide-fab-onscroll.git"
+    },
     "license": "MIT",
     "peerDependencies": {
         "ionic-angular": "^3.9.2"
@@ -22,6 +26,6 @@
         "@angular/common": "^5.1.2",
         "@angular/compiler": "^5.1.2",
         "@angular/compiler-cli": "^5.1.2",
-        "typescript": "2.6.2"
+        "typescript": "^2.6.2"
     }
 }
