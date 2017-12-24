@@ -8,9 +8,5 @@
         "experimentalDecorators": true,
         "declaration": true,
         "outDir": "./dist"
-    },
-    "files": ["./src/ionic-hide-fab-onscroll.ts"],
-    "angularCompilerOptions": {
-        "strictMetadataEmit": true
     }
 }

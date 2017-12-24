@@ -1,0 +1,30 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "es2015",
+        "sourceMap": true,
+        "moduleResolution": "node",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "declaration": true,
+        "outDir": "../build",
+        "lib": ["es5", "es6", "dom"]
+    },
+    "files": ["./index.ts"],
+    "angularCompilerOptions": {
+        "genDir": "compiled",
+        "strictMetadataEmit": true,
+        "skipTemplateCodegen": true,
+        "flatModuleOutFile": "ionic-hide-fab-onscroll.es5.js",
+        "flatModuleId": "ionic-hide-fab-onscroll-es5",
+        "annotateForClosureCompiler": true
+    },
+    "exclude": [
+        "node_modules",
+        "dist",
+        "gh-pages",
+        "**/*.ngfactory.ts",
+        "**/*.shim.ts",
+        "**/*.spec.ts"
+    ]
+}
