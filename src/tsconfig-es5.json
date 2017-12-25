@@ -7,7 +7,7 @@
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
         "declaration": true,
-        "outDir": "../build",
+        "outDir": "../build/es5",
         "lib": ["es5", "es6", "dom"]
     },
     "files": ["./index.ts"],
@@ -15,8 +15,8 @@
         "genDir": "compiled",
         "strictMetadataEmit": true,
         "skipTemplateCodegen": true,
-        "flatModuleOutFile": "ionic-hide-fab-onscroll.es5.js",
-        "flatModuleId": "ionic-hide-fab-onscroll-es5",
+        "flatModuleOutFile": "ionic-hide-fab-onscroll.js",
+        "flatModuleId": "ionic-hide-fab-onscroll",
         "annotateForClosureCompiler": true
     },
     "exclude": [

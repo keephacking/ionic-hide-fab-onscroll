@@ -142,4 +142,4 @@ HideFabOnscrollModule.ctorParameters = () => [];
  * Generated bundle index. Do not edit.
  */
 
-export { HideFabOnscrollModule, HideFabOnscrollDirective };
+export { HideFabOnscrollDirective, HideFabOnscrollModule };

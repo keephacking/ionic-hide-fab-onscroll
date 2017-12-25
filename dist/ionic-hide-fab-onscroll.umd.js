@@ -144,8 +144,8 @@ HideFabOnscrollModule.ctorParameters = () => [];
  * Generated bundle index. Do not edit.
  */
 
-exports.HideFabOnscrollModule = HideFabOnscrollModule;
 exports.HideFabOnscrollDirective = HideFabOnscrollDirective;
+exports.HideFabOnscrollModule = HideFabOnscrollModule;
 
 Object.defineProperty(exports, '__esModule', { value: true });
 

@@ -6,16 +6,8 @@ import { App, DomController, Platform } from 'ionic-angular';
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
-class HideFabOnscrollDirective {
-    /**
-     * @param {?} el
-     * @param {?} renderer
-     * @param {?} zone
-     * @param {?} plt
-     * @param {?} domCtrl
-     * @param {?} app
-     */
-    constructor(el, renderer, zone, plt, domCtrl, app) {
+var HideFabOnscrollDirective = /** @class */ (function () {
+    function HideFabOnscrollDirective(el, renderer, zone, plt, domCtrl, app) {
         this.el = el;
         this.renderer = renderer;
         this.zone = zone;
@@ -31,48 +23,64 @@ class HideFabOnscrollDirective {
     /**
      * @return {?}
      */
-    ngAfterViewInit() {
+    HideFabOnscrollDirective.prototype.ngAfterViewInit = /**
+     * @return {?}
+     */
+    function () {
+        var _this = this;
         //After initializing all the elements , set their transiotn property
         this.initFab();
         // TODO: init the scroll view and enable scroll events
         //then bind the function onScroll
         this.scroll = new ScrollView(this.app, this.plt, this.domCtrl);
         this.scroll.enableEvents();
-        this.zone.runOutsideAngular(() => {
-            this.scroll.init(this.content.getScrollElement(), this.content._cTop, this.content._cBottom);
-            this.scroll.onScroll = ev => {
-                this.scrollDir = ev.directionY;
-                this.scrollTop = ev.scrollTop;
+        this.zone.runOutsideAngular(function () {
+            _this.scroll.init(_this.content.getScrollElement(), _this.content._cTop, _this.content._cBottom);
+            _this.scroll.onScroll = function (ev) {
+                _this.scrollDir = ev.directionY;
+                _this.scrollTop = ev.scrollTop;
             };
-            this.scroll.onScrollStart = ev => {
-                this.render(null);
+            _this.scroll.onScrollStart = function (ev) {
+                _this.render(null);
             };
         });
-    }
+    };
     /**
      * @return {?}
      */
-    ngOnDestroy() {
+    HideFabOnscrollDirective.prototype.ngOnDestroy = /**
+     * @return {?}
+     */
+    function () {
         this.scroll && this.scroll.destroy();
-    }
+    };
     /**
      * @param {?} ts
      * @return {?}
      */
-    render(ts) {
-        let /** @type {?} */ rAFInt = this.plt.raf(ts => this.render(ts));
+    HideFabOnscrollDirective.prototype.render = /**
+     * @param {?} ts
+     * @return {?}
+     */
+    function (ts) {
+        var _this = this;
+        var /** @type {?} */ rAFInt = this.plt.raf(function (ts) { return _this.render(ts); });
         if (this.scroll.isScrolling) {
             this.hideFab(ts);
         }
         else {
             this.plt.cancelRaf(rAFInt);
         }
-    }
+    };
     /**
      * @param {?} timestamp
      * @return {?}
      */
-    hideFab(timestamp) {
+    HideFabOnscrollDirective.prototype.hideFab = /**
+     * @param {?} timestamp
+     * @return {?}
+     */
+    function (timestamp) {
         // GOING UP
         if (this.scrollDir == "up" && this.scrollTop > this.BOTTOM_THRESHOLD) {
             this.renderer.setStyle(this.fab, "opacity", "1");
@@ -83,51 +91,58 @@ class HideFabOnscrollDirective {
             this.renderer.setStyle(this.fab, this.plt.Css.transform, "scale3d(.1,.1,.1)");
             this.renderer.setStyle(this.fab, "opacity", "0");
         }
-    }
+    };
     /**
      * @return {?}
      */
-    initFab() {
+    HideFabOnscrollDirective.prototype.initFab = /**
+     * @return {?}
+     */
+    function () {
         this.fab = this.el.nativeElement;
-        this.renderer.setStyle(this.fab, this.plt.Css.transition, `transform ${this.TRANSITION_DELAY}, opacity ${this.TRANSITION_DELAY}`);
-    }
-}
-HideFabOnscrollDirective.decorators = [
-    { type: Directive, args: [{
-                selector: "[hideFabOnscroll]"
-            },] },
-];
-/** @nocollapse */
-HideFabOnscrollDirective.ctorParameters = () => [
-    { type: ElementRef, },
-    { type: Renderer2, },
-    { type: NgZone, },
-    { type: Platform, },
-    { type: DomController, },
-    { type: App, },
-];
-HideFabOnscrollDirective.propDecorators = {
-    "content": [{ type: Input, args: ["hideFabOnscroll",] },],
-};
+        this.renderer.setStyle(this.fab, this.plt.Css.transition, "transform " + this.TRANSITION_DELAY + ", opacity " + this.TRANSITION_DELAY);
+    };
+    HideFabOnscrollDirective.decorators = [
+        { type: Directive, args: [{
+                    selector: "[hideFabOnscroll]"
+                },] },
+    ];
+    /** @nocollapse */
+    HideFabOnscrollDirective.ctorParameters = function () { return [
+        { type: ElementRef, },
+        { type: Renderer2, },
+        { type: NgZone, },
+        { type: Platform, },
+        { type: DomController, },
+        { type: App, },
+    ]; };
+    HideFabOnscrollDirective.propDecorators = {
+        "content": [{ type: Input, args: ["hideFabOnscroll",] },],
+    };
+    return HideFabOnscrollDirective;
+}());
 
 /**
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
-class HideFabOnscrollModule {
-}
-HideFabOnscrollModule.decorators = [
-    { type: NgModule, args: [{
-                declarations: [
-                    HideFabOnscrollDirective
-                ],
-                exports: [
-                    HideFabOnscrollDirective
-                ]
-            },] },
-];
-/** @nocollapse */
-HideFabOnscrollModule.ctorParameters = () => [];
+var HideFabOnscrollModule = /** @class */ (function () {
+    function HideFabOnscrollModule() {
+    }
+    HideFabOnscrollModule.decorators = [
+        { type: NgModule, args: [{
+                    declarations: [
+                        HideFabOnscrollDirective
+                    ],
+                    exports: [
+                        HideFabOnscrollDirective
+                    ]
+                },] },
+    ];
+    /** @nocollapse */
+    HideFabOnscrollModule.ctorParameters = function () { return []; };
+    return HideFabOnscrollModule;
+}());
 
 /**
  * @fileoverview added by tsickle
@@ -142,4 +157,4 @@ HideFabOnscrollModule.ctorParameters = () => [];
  * Generated bundle index. Do not edit.
  */
 
-export { HideFabOnscrollModule, HideFabOnscrollDirective };
+export { HideFabOnscrollDirective, HideFabOnscrollModule };
