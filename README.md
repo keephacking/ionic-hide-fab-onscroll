@@ -9,4 +9,6 @@ A simple plugin to hide ionic fab buttons while scrolling. **Version 0.1.1**
  * `<ion-fab bottom right><button ion-fab [hideFabOnscroll]='content'>top</button></ion-fab>` 
  * :) good to go
 # Demo
+### [For Demo Click here](https://stackblitz.com/edit/ionic-hide-fab-onscroll-demo)
+
 ![Plugin preview](https://raw.githubusercontent.com/keephacking/ionic-hide-fab-onscroll/master/demo/demo.gif)
