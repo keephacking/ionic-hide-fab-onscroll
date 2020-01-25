@@ -1,6 +1,6 @@
 {
   "name": "ionic-hide-fab-onscroll",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A plugin to hide the header on scroll",
   "license": "MIT",
   "private": false,

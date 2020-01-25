@@ -1,6 +1,6 @@
 {
     "name": "ionic-hide-fab-onscroll",
-    "version": "0.1.0",
+    "version": "0.3.0",
     "description": "A simple plugin to hide the ionic fab buttons while scrolling",
     "main": "index.js",
     "scripts": {
@@ -22,5 +22,10 @@
     "devDependencies": {
         "ng-packagr": "^4.0.0-rc.3",
         "copyfiles": "^2.0.0"
+    },
+    "dependencies": {
+        "@angular/compiler-cli": "^6.0.0",
+        "@angular/core": "^6.0.0",
+        "ionic-angular": "^3.9.9"
     }
 }

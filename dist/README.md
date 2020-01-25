@@ -1,3 +1,5 @@
+# For ionic 4+ , please check this repo [ionic-hide-onscroll](https://github.com/keephacking/ionic-essentials/tree/master/projects/ionic-hide-onscroll)
+
 # ionic-hide-fab-onscroll 
 A simple plugin to hide ionic fab buttons while scrolling. 
 
